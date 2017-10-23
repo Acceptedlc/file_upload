@@ -5,8 +5,9 @@ const fs = require('fs');
 const app = new Koa();
 const mkdirp = require('mkdirp-promise');
 
-const targetDir = process.argv[2] || path.join(__dirname, "public");
-console.log("文件上传根目录：",targetDir);
+const port = process.argv[2] || 3000;
+const targetDir = process.argv[3] || path.join(__dirname, "public");
+
 
 
 app.use(koaBody({
@@ -45,4 +46,6 @@ function moveFile(from, to) {
   });
 }
 
-app.listen(3000);
+app.listen(port);
+consloe.log("listen: ",port);
+console.log("文件上传根目录：",targetDir);
