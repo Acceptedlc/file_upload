@@ -47,5 +47,5 @@ function moveFile(from, to) {
 }
 
 app.listen(port);
-consloe.log("listen: ",port);
+console.log("listen: ",port);
 console.log("文件上传根目录：",targetDir);
